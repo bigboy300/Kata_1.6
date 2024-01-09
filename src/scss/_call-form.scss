@@ -1,0 +1,118 @@
+.call {
+  min-width: 320px;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+
+.call-form {
+  min-width: 320px;
+  width: 100%;
+  height: 100vh;
+  background-color: $background-white;
+  border-left: 1px solid $link-border;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding-top: 90px;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+    -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 16px;
+  &__input {
+    height: 48px;
+    margin: 0 16px;
+    padding-left: 16px;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: $input-color;
+    border-radius: 8px;
+    border: 1px solid $brend-border;
+  }
+  &__text {
+    color: $link-gray;
+    margin: 0 16px;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  &__form-button {
+    margin: 0 16px;
+    align-self: flex-end;
+  }
+}
+.call.call-block--hidden {
+  display: none;
+}
+
+.title__text {
+  color: $text-main;
+
+  font-size: 24px;
+
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: -0.6px;
+}
+.link-pink {
+  color: $button-ping;
+}
+.callmute-area {
+  min-width: 320px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+}
+.call__close-button {
+  margin-top: 24px;
+  margin-left: 16px;
+}
+@media (min-width: $screen-xs) {
+  .call {
+    z-index: 2;
+  }
+}
+@media (min-width: $screen-md) {
+  .call-form {
+    padding-top: 32px;
+    width: 440px;
+  }
+  .call {
+    width: 100%;
+    height: 2000px;
+    background-color: rgba(255, 255, 255, 0.95);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 440px;
+    z-index: 2;
+  }
+  .callmute-area {
+    grid-column: 1/2;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .call__close-button {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: 32px;
+  }
+}
+@media (min-width: $screen-xl) {
+  .call__close-button {
+    display: block;
+  }
+}

@@ -1,0 +1,65 @@
+.equipment-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.equipment-block__equipment-container {
+  width: 1120px;
+  padding-left: 32px;
+}
+.section-header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #f8f8f8 0%, #fff 98.61%);
+  border-top: 1px solid $link-border;
+}
+.price__section-header {
+  margin-top: 50px;
+}
+.equipment-block__repair-card {
+  background: $background-white;
+  width: 242px;
+  border: 1px solid $brend-border;
+}
+.repair-card__circle-btn {
+  align-self: flex-end;
+  margin-bottom: 16px;
+}
+
+.device-link {
+  display: flex;
+  border-radius: 6px;
+  justify-content: space-between;
+
+  height: 160px;
+  padding: 0 16px;
+}
+
+.read-more__devices {
+  margin-left: 24px;
+}
+// _____________320____________//
+@media (max-width: $screen-md) {
+  .equipment-container {
+    display: none;
+  }
+}
+/* ________768px_________ */
+@media (min-width: $screen-md) {
+  .equipment-block__equipment-container {
+    height: 170px;
+    overflow: hidden;
+  }
+}
+@media (max-width: $screen-lg) {
+  .equipment-block__equipment-container {
+    width: 832px;
+  }
+}
+@media (min-width: $screen-xl) {
+  .equipment-container {
+    overflow: hidden;
+    height: 180px;
+  }
+}

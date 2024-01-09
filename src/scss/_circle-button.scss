@@ -1,0 +1,75 @@
+.circle-btn {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+
+  outline: none;
+  width: 40px;
+  height: 40px;
+  &:hover {
+    transform: scale(0.9);
+    transition-duration: 0.1s;
+    filter: invert(100%);
+  }
+  &--contact {
+    background: url(../img/call.svg);
+  }
+  &--chat {
+    background: url(../img/chat.svg);
+  }
+
+  &--profile {
+    background: url(../img/profile.svg);
+  }
+  &--search {
+    background: url(../img/search.svg);
+  }
+  &--close-burger {
+    background: url(../img/close.svg);
+  }
+  &--burger {
+    background: url(../img/burger.svg);
+  }
+  &--profile {
+    background: url(../img/profile.svg);
+  }
+  &--repair {
+    background: url(../img/repair.svg);
+  }
+  &--checkStatus {
+    background: url(../img/checkstatus.svg);
+  }
+  &--with-text {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    font-weight: 600;
+    color: #1b1c21;
+    align-self: center;
+    width: 173px;
+  }
+  &--with-text-1 {
+    background: url(../img/repair.svg) no-repeat center center;
+  }
+  &--with-text-2 {
+    background: url(../img/checkstatus.svg) no-repeat center center;
+  }
+  &--show-more {
+    background: url(../img/go.svg) no-repeat;
+    margin-left: auto;
+    margin-right: 16px;
+  }
+  @media (min-width: $screen-xl) {
+    &--with-text-1 {
+      padding-right: 6px;
+    }
+    &--with-text {
+      display: flex;
+      background-position: right 50%;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
