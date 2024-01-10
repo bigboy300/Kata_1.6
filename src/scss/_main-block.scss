@@ -240,11 +240,14 @@ section {
     padding-top: 20px;
     height: auto;
   }
-  .swiper-wrapper::after {
+  .swiper {
+    position: relative;
+  }
+  .swiper::after {
     content: '';
-    position: fixed;
+    position: absolute;
     top: 0;
-    right: 15px;
+    right: 0px;
     bottom: 0;
     width: 24px;
     background: linear-gradient(
