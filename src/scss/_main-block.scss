@@ -114,6 +114,9 @@ section {
     margin: 0;
   }
 }
+.nav-2 {
+  position: relative;
+}
 .nav {
   display: flex;
   overflow-x: scroll;
@@ -207,6 +210,21 @@ section {
   .nav {
     padding-left: 16px;
   }
+  .nav-2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    width: 24px;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0) 100%
+    );
+    z-index: 1;
+  }
   .about {
     display: flex;
     flex-direction: column;
@@ -221,6 +239,20 @@ section {
     width: 100%;
     padding-top: 20px;
     height: auto;
+  }
+  .swiper-wrapper::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 15px;
+    bottom: 0;
+    width: 24px;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0) 100%
+    );
+    z-index: 1;
   }
 }
 /* ________768px_________ */

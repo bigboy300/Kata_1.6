@@ -4,7 +4,7 @@
   gap: 32px;
 }
 .equipment-block__equipment-container {
-  width: 1120px;
+  width: 1100px;
   padding-left: 32px;
 }
 .section-header {
@@ -55,6 +55,11 @@
 @media (max-width: $screen-lg) {
   .equipment-block__equipment-container {
     width: 832px;
+  }
+}
+@media (max-width: 854px) {
+  .equipment-block__equipment-container {
+    width: 700px;
   }
 }
 @media (min-width: $screen-xl) {

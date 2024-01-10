@@ -79,6 +79,7 @@
 @media (min-width: $screen-xs) {
   .call {
     z-index: 2;
+    position: fixed;
   }
 }
 @media (min-width: $screen-md) {
