@@ -27,10 +27,10 @@
   background-color: transparent;
   outline: none;
   width: 40px;
-  height: 40px; }
+  height: 40px;
+  transition-duration: 0.1s; }
   .circle-btn:hover {
     transform: scale(0.9);
-    transition-duration: 0.1s;
     -webkit-filter: invert(100%);
             filter: invert(100%); }
   .circle-btn--contact {
@@ -84,7 +84,7 @@ html {
 
 a {
   text-decoration: inherit;
-  color: #1b1c21; }
+  color: #7e7e82; }
 
 li {
   margin: 0;
@@ -113,10 +113,10 @@ section {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
-  letter-spacing: -0.2px; }
+  letter-spacing: -0.2px;
+  transition: 0.3s; }
   .link:hover {
-    color: #ff3e79;
-    transition: 0.3s; }
+    color: #ff3e79; }
 
 .subtitle {
   padding-left: 32px;
@@ -128,6 +128,10 @@ section {
   line-height: 24px;
   /* 150% */
   letter-spacing: -0.2px; }
+
+.blocks-container {
+  width: 100%;
+  max-width: 1440px; }
 
 .header {
   display: flex;
@@ -203,7 +207,7 @@ section {
     border-radius: 6px;
     border: 2px solid #b8ffec; }
   .nav__link:hover {
-    color: #7e7e82; }
+    color: #1b1c21; }
 
 .about {
   display: flex;
@@ -235,6 +239,9 @@ section {
 
 .read-more--close {
   background: url(./static/expand-close.svg) no-repeat left; }
+
+.read-more:hover {
+  color: #ff3e79; }
 
 /* _______320px_________ */
 @media (max-width: 768px) {
@@ -294,7 +301,7 @@ section {
 /* ________768px_________ */
 @media (min-width: 768px) {
   .header {
-    padding: 0 35px 0 0px; }
+    padding: 0 21px 0 0px; }
   .header__logo-part {
     gap: 30px; }
   .logo-part::before {
@@ -327,7 +334,7 @@ section {
   .blocks-container {
     display: flex; }
   .blocks-without-aside {
-    width: 1120px; }
+    width: 1190px; }
   .header {
     display: none; }
   .title {
@@ -344,11 +351,6 @@ section {
     display: none; }
   .about__image-cps {
     width: 531px; } }
-
-.blocks-container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto; }
 
 .mobile-menu-block {
   width: 320px;
@@ -399,9 +401,9 @@ section {
   gap: 25px;
   padding: 2px 0 60px 0px; }
   .main-menu__item--active::before {
-    content: url(./static/highlight2.svg);
+    content: url(./static/highlight28px.svg);
     position: absolute;
-    top: 102px;
+    top: 150px;
     left: 0px; }
   .main-menu__item--active {
     color: #7e7e82;
@@ -442,18 +444,21 @@ section {
   color: #7e7e82;
   font-weight: 500;
   pointer-events: none;
-  transform: translateY(2px);
+  transform: translateY(1px);
   display: block; }
 
 /* ------------320px----------- */
+@media (max-width: 768px) {
+  .mobile-menu {
+    position: fixed; } }
+
 @media (min-width: 320px) {
   .mobile-menu-block {
     height: auto; }
   .mobile-menu {
     min-width: 320px;
     width: 100%;
-    z-index: 2;
-    position: fixed; } }
+    z-index: 2; } }
 
 @media (min-width: 768px) {
   .mobile-menu-block {
@@ -513,6 +518,11 @@ section {
   border-radius: 6px;
   border: 1px solid #eaeaea;
   background-color: #fff; }
+
+.block__link:hover .circle-btn--show-more {
+  transform: scale(0.9);
+  -webkit-filter: invert(100%);
+          filter: invert(100%); }
 
 .block:last-child,
 .block:nth-last-child(2),
@@ -582,7 +592,8 @@ section {
 
 .equipment-block__equipment-container {
   width: 1100px;
-  padding-left: 32px; }
+  padding-left: 32px;
+  margin-top: 25px; }
 
 .section-header {
   height: 56px;
@@ -597,7 +608,8 @@ section {
 .equipment-block__repair-card {
   background: #fff;
   width: 242px;
-  border: 1px solid #eaeaea; }
+  border: 1px solid #eaeaea;
+  border-radius: 6px; }
 
 .repair-card__circle-btn {
   align-self: flex-end;
@@ -641,23 +653,35 @@ section {
   grid-template-columns: 60% 1fr 1fr 1fr;
   width: 100%;
   height: 64px;
-  border: none;
-  border-radius: 0;
   align-items: center;
   padding: 0 16px;
-  border-bottom: 1px solid #eaeaea;
-  background: #fff; }
+  background: #fff;
+  position: relative; }
+
+.price-item:nth-child(2) {
+  border-radius: 6px; }
 
 .price-item:first-child {
   background: #f8f8f8;
   border: none; }
 
 .price-item:last-child {
-  border: none; }
+  border: none;
+  border-radius: 6px; }
+  .price-item:last-child .price__item:last-child() {
+    border-top-right-radius: 6px; }
 
 .price-list {
-  border-radius: 6px;
   margin: 0 30px; }
+
+.price-item:not(:first-child):not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  height: 1px;
+  background-color: #eaeaea; }
 
 .category {
   color: #7e7e82;
