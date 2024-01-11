@@ -22,6 +22,10 @@
   border: 1px solid $brend-border;
   background-color: $background-white;
 }
+.block__link:hover .circle-btn--show-more {
+  transform: scale(0.9);
+  filter: invert(100%);
+}
 .block:last-child,
 .block:nth-last-child(2),
 .block:nth-last-child(3) {

@@ -6,6 +6,7 @@
 .equipment-block__equipment-container {
   width: 1100px;
   padding-left: 32px;
+  margin-top: 25px;
 }
 .section-header {
   height: 56px;
@@ -21,6 +22,7 @@
   background: $background-white;
   width: 242px;
   border: 1px solid $brend-border;
+  border-radius: 6px;
 }
 .repair-card__circle-btn {
   align-self: flex-end;
